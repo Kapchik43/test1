@@ -1,0 +1,15 @@
+Hello world! This is a simple test file.
+Here is an example of Category 1 words: iPHONE, iPAD, and eBay.
+Also we have some sTRANGE wORDS like tHIS and tHAT.
+
+Here are some normal words: Apple, Window, Computer.
+And here are Category 2 words: small, tiny, little, mouse.
+
+Check mixed cases:
+1. Normal: Hello
+2. Italic (cat 2): hello
+3. Bold (cat 1): hELLO
+
+Symbols check: <brackets> & other punctuation...
+New line check.
+End of file.
