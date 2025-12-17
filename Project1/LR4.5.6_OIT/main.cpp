@@ -41,3 +41,54 @@ char* CreateNewString(char* s1) {
 	s2[len] = '\0';
 	return s2;
 }
+#include <stdio.h>
+
+int n, m, a[10][10];
+
+void InputArray() {
+	scanf_s("%d", &n);
+	scanf_s("%d", &m);
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			scanf_s("%d", &a[i][j]);
+		}
+	}
+}
+
+void PrintArray() {
+	printf("\n%d %d\n", n, m);
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			printf("%3d ", a[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+void DoingSomething() {
+	int min = a[0][0], mini = 0, minj = 0;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			if (a[i][j] < min) {
+				min = a[i][j];
+				mini = i;
+				minj = j;
+			}
+
+		}
+	}
+
+	for (int i = mini + 1; i < n; i++) {
+		for (int j = minj + 1; j < m; j++) {
+			if (a[i][j] % 10 == 0) {
+				a[i][j] /= 10;
+			}
+		}
+	}
+}
+void main() {
+	InputArray();
+	PrintArray();
+	DoingSomething();
+	PrintArray();
+}
